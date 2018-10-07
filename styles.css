@@ -19,6 +19,7 @@ h2 {
     font-size: 50px;
     font-weight: 100;
     text-align: center;
+    margin-top: 0px;
 }
 
 h3 {
@@ -30,20 +31,22 @@ h3 {
 
 p {
     text-align: center;
-    font-family: Oswald;
     font-size: 25px;
     font-weight: 300;
-    font-color: black;
+    margin-bottom:10px;
+    font-color: rgba(0,0,0,.4);
+    font-family: Oswald;
 }
 
 .links {
+    width: 40px;
+}
+
+.links a {
     text-align: center;
     font-size: 20px;
     text-decoration: none;
-}
-.links a {
     display: block;
-    font-family: Oswald;
 }
 
 .ps-top-to-bottom {
