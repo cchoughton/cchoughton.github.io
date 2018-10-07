@@ -124,9 +124,7 @@ p {
 
 .lucky {
     background: url(http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png) 0 0 no-repeat; 
-    position:absolute;
-    bottom: 0%;
-    transform:translateY(100%);
+    transform:translateY(200%);
     zoom:40%;
     height: 200px;
     width: 400px;
