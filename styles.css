@@ -4,7 +4,7 @@
 body {
     font-family: Montserrat;
     font-size: 20px;
-    background-color: rgba(100, 100, 100, .8);
+    background-color: rgba(100, 100, 100, .4);
     margin: 0px;
 }
 
@@ -40,9 +40,7 @@ p {
 }
 
 .main {
-    position:absolute;
-    top: 38%;
-    transform: translateY(-50%);
+    margin-top: 100px;
 }
 
 .links {
@@ -64,16 +62,12 @@ p {
 
 .ps-top-to-bottom {
     position: relative;
-    border-top: 3px solid black;
+    border-top: 8px solid black;
 }
 .ps-top-to-bottom:before, .ps-top-to-bottom:after {
     content: "";
     position: absolute;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
-    background-image: -webkit-linear-gradient(#000, transparent);
-    background-image: -moz-linear-gradient(#000, transparent);
-    background-image: -o-linear-gradient(#000, transparent);
-    background-image: linear-gradient(#000, transparent);
+    background-image: -webkit-gradient(linear, 0 0, 0 500, from(#000), to(transparent));
     top: 0px;
     bottom: 0px;
     width: 8px;
