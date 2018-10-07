@@ -121,3 +121,23 @@ p {
     100%{color: blue;}
     100%{color: orange;}
 }
+
+.lucky {
+    background: url(http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png) 0 0 no-repeat; 
+    position:absolute;
+    bottom: 0%;
+    transform:translateY(100%);
+    zoom:40%;
+    height: 200px;
+    width: 400px;
+    margin: 100px auto 0;
+    animation: walk-cycle steps(11) infinite 1.5s;
+}
+@keyframes walk-cycle {
+    0% {
+        background-position: 0 0;
+    } 
+    100% {
+        background-position: 0 100%;
+    }
+}
