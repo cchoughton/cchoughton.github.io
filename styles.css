@@ -5,6 +5,7 @@ body {
     font-family: Montserrat;
     font-size: 20px;
     background-color: rgba(100, 100, 100, .8);
+    margin: 0px;
 }
 
 h1 {
@@ -38,17 +39,26 @@ p {
     font-family: Oswald;
 }
 
+.main {
+    position:absolute;
+    top: 38%;
+    transform: translateY(-50%);
+}
+
 .links {
     width: 100%;
+    margin-top:100px;
     text-align: center;
 }
 
 .links a {
     margin-left: auto;
     margin-right: auto;
+    margin-top:5px;
     width: 120px;
     font-size: 20px;
     text-decoration: none;
+    color: (0,0,0,.7);
     display: block;
 }
 
@@ -64,15 +74,15 @@ p {
     background-image: -moz-linear-gradient(#000, transparent);
     background-image: -o-linear-gradient(#000, transparent);
     background-image: linear-gradient(#000, transparent);
-    top: -3px;
-    bottom: -3px;
-    width: 3px;
+    top: 0px;
+    bottom: 0px;
+    width: 8px;
 }
 .ps-top-to-bottom:before {
-    left: -3px;
+    left: 0px;
 }
 .ps-top-to-bottom:after {
-    right: -3px;
+    right: 0px;
 }
 
 .rainbow {
