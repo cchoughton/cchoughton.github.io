@@ -39,11 +39,14 @@ p {
 }
 
 .links {
-    width: 40px;
+    width: 100%;
+    text-align: center;
 }
 
 .links a {
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
     font-size: 20px;
     text-decoration: none;
     display: block;
