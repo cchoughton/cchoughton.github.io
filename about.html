@@ -15,8 +15,8 @@
     <!-- begin header -->
     <header><div id="logo"><h1>PHOTO<a href="#">ART</a>WORK</h1></div>
       <nav><ul class="sf-menu" id="nav">
-<li class="selected"><a href="index.html">home</a></li>
-          <li><a href="about.html">about me</a></li>
+<li><a href="index.html">home</a></li>
+          <li class="selected"><a href="about.html">about me</a></li>
           <li>
 <a href="#">my portfolio</a>
             <ul>
@@ -27,12 +27,14 @@
           <li><a href="blog.html">blog</a></li>
           <li><a href="contact.php">contact</a></li>
         </ul></nav></header><!-- end header --><!-- begin content --><div id="site_content">
-      <ul class="slideshow">
-<li class="show"><img width="950" height="450" src="images/home_1.jpg" alt="&quot;You can put a caption for your image right here&quot;"></li>
-        <li><img width="950" height="450" src="images/home_2.jpg" alt="&quot;You can put a description of the image here if you like, or anything else if you want.&quot;"></li>
-        <li><img width="950" height="450" src="images/home_3.jpg" alt="&quot;You can put a description of the image here if you like, or anything else if you want.&quot;"></li>
-      </ul>
+      <div id="left_content">
+        <h1>About This Template</h1>
+        <p>This simple, fixed width website template is released under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>. This means you are free to download and use it for personal and commercial projects. However, you <strong>must leave the 'Design and photos from css3templates.co.uk' link in the footer of the template</strong>. This template is written entirely in <strong>HTML5</strong> and <strong>CSS3</strong>.</p>
+      </div>
+      <div id="right_content">
+        <img style="float: left;" src="images/about.jpg" title="about me" alt="about me">
 </div>
+    </div>
     <!-- end content -->
 
     <!-- begin footer -->
@@ -42,7 +44,7 @@
     </footer><!-- end footer -->
 </div>
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/jquery.easing-sooper.js"></script><script type="text/javascript" src="js/jquery.sooperfish.js"></script><script type="text/javascript" src="js/image_fade.js"></script><!-- initialise sooperfish menu --><script type="text/javascript">
+  <script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/jquery.easing-sooper.js"></script><script type="text/javascript" src="js/jquery.sooperfish.js"></script><!-- initialise sooperfish menu --><script type="text/javascript">
     $(document).ready(function() {
       $('ul.sf-menu').sooperfish();
     });
