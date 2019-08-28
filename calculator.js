@@ -9,3 +9,8 @@ document.getElementById("rm_sem").onclick = function () {
     var sems = document.getElementById("semesters");
     sems.removeChild(sems.lastChild);
 };
+
+document.getElementById("calculate").onclick = function () {
+    var grades = document.getElementsByClass("grade");
+    var credit_hours = document.getElementsByClass("credit_hours");
+};
