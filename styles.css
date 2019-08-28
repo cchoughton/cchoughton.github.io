@@ -38,7 +38,6 @@ p {
     font-color: rgba(0,0,0,.4);
     font-family: Oswald;
 }
-/*
 label {
     float: left;
     width: 200px;
@@ -47,14 +46,11 @@ label {
 
 input {
     float: left;
-    width: calc(100% - 200px);
 }
 
 button {
     float: right;
-    width: calc(100% - 200px);
 }
-*/
 .main {
     margin-top: 100px;
 }
