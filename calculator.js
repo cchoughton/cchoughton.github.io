@@ -6,6 +6,6 @@ document.getElementById("add_sem").onclick = function () {
 };
 
 document.getElementById("rm_sem").onclick = function () {
-    var sems = document.getElementById("semesters").removeChild();
+    var sems = document.getElementById("semesters");
     sems.removeChild(sems.lastChild);
 };
