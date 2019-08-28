@@ -97,7 +97,7 @@ input:focus {
     width: calc(100% - 200px);
   }
 
-  button {
+  form button {
     float: right;
     width: calc(100% - 200px);
   }
