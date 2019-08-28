@@ -82,16 +82,26 @@ input:focus {
   outline: 3px solid gold;
 }
 
-label {
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+
+  label {
     float: left;
     width: 200px;
-    padding-right: 24px;
-}
+  }
 
-input {
+  input {
     float: left;
-}
+    width: calc(100% - 200px);
+  }
 
+  button {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
 .main {
     margin-top: 100px;
 }
