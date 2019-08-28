@@ -16,8 +16,8 @@ document.getElementById("calculate").onclick = function () {
     var gpa=0;
     var total_credit_hours=0;
     for (var i = 0; i < grades.length; i++) {
-        gpa+=convert(grades[i].value)*credit_hours[i].value;
-        total_credit_hours+=credit_hours[i].value;
+        gpa+=Number(convert(grades[i].value))*Number(credit_hours[i].value);
+        total_credit_hours+=Number(credit_hours[i].value);
     }
     document.getElementsByClassName("calculated-gpa")[0].children[0].innerText=gpa/total_credit_hours;
 };
