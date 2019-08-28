@@ -39,11 +39,35 @@ p {
     font-family: Oswald;
 }
 
+label {
+    float: left;
+    width: 200px;
+    padding-right: 24px;
+}
+
+input {
+    float: left;
+    width: calc(100% - 200px);
+}
+
+button {
+    float: right;
+    width: calc(100% - 200px);
+}
+
 .main {
     margin-top: 100px;
 }
 
 .calculator {
+    margin-top: 100px;
+}
+
+.semester {
+    margin-top: 100px;
+}
+
+.semesters {
     margin-top: 100px;
 }
 
