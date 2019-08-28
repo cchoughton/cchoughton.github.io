@@ -142,7 +142,7 @@ input:focus {
 }
 
 .top-buttons {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .calculate-button {
@@ -159,6 +159,12 @@ input:focus {
     width: 100%;
     margin-top:100px;
     text-align: center;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+    text-decoration: none;
 }
 
 .links a {
