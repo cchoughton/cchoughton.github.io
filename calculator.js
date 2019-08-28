@@ -21,7 +21,7 @@ document.getElementById("calculate").onclick = function () {
     }
 };
 
-function convert (String grade) {
+function convert (var grade) {
     if (grade=="A+") return 4.0;
     else if (grade=="A") return 4.0;
     else if (grade=="A-") return 3.7;
