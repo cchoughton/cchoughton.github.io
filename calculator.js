@@ -13,4 +13,26 @@ document.getElementById("rm").onclick = function () {
 document.getElementById("calculate").onclick = function () {
     var grades = document.getElementsByClassName("grade");
     var credit_hours = document.getElementsByClassName("credit_hours");
+    var gpa=0;
+    var total_credit_hours=0;
+    for (int i = 0; i < grades.length(); i++) {
+        gpa+=convert(grades[i].value)*credit_hours[i].value;
+        total_credit_hours+=credit_hours[i].value;
+    }
 };
+
+function convert (String grade) {
+    if (grade=="A+") return 4.0;
+    else if (grade=="A") return 4.0;
+    else if (grade=="A-") return 3.7;
+    else if (grade=="B+") return 3.3;
+    else if (grade=="B") return 3.0;
+    else if (grade=="B-") return 2.7;
+    else if (grade=="C+") return 2.3;
+    else if (grade=="C") return 2.0;
+    else if (grade=="C-") return 1.7;
+    else if (grade=="D+") return 1.3;
+    else if (grade=="D") return 1.0;
+    else if (grade=="F") return 0.0;
+    else return 0.0;
+}
