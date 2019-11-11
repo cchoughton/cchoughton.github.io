@@ -134,7 +134,7 @@ input:focus {
 }
 
 .main {
-    margin-top: 100px;
+    #margin-top: 100px;
 }
 
 .calculator {
@@ -247,6 +247,7 @@ a {
     height: 200px;
     width: 400px;
     margin: 100px auto 0;
+    margin-bottom: 600px;
     animation: walk-cycle steps(11) infinite 1.5s;
 }
 @keyframes walk-cycle {
