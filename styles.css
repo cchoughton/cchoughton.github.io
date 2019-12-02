@@ -4,6 +4,11 @@
 html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
+    min-width:600px;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
 }
 
 body {
@@ -69,7 +74,7 @@ form {
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-  animation: 1s slide-up;
+  animation: .6s slide-up;
   margin-top:0%;
 }
 
@@ -112,6 +117,67 @@ input:focus {
   outline: 3px solid gold;
 }
 
+.main {
+    #margin-top: 100px;
+}
+
+.calculator {
+    margin-top: 100px;
+}
+
+.top-buttons {
+    margin-top: 50px;
+}
+
+.semester {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.calculate-button {
+    margin-top: 20px;
+}
+
+.calculated-gpa {
+    margin-top: 20px;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.calculated-credits {
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.courses {
+    display:inline-grid;
+}
+
+@media (min-width: 350px) {
+    .courses {
+        grid-template-columns:300px;
+    }
+}
+
+@media (min-width: 650px) {
+    .courses {
+        grid-template-columns:300px 300px;
+    }
+}
+
+@media (min-width: 950px) {
+    .courses {
+        grid-template-columns:300px 300px 300px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .courses {
+        grid-template-columns:300px 300px 300px 300px;
+    }
+}
+
 @media (min-width: 400px) {
   form {
     overflow: hidden;
@@ -131,28 +197,6 @@ input:focus {
     float: right;
     width: calc(100% - 200px);
   }
-}
-
-.main {
-    #margin-top: 100px;
-}
-
-.calculator {
-    margin-top: 100px;
-}
-
-.top-buttons {
-    margin-top: 50px;
-}
-
-.calculate-button {
-    margin-top: 20px;
-}
-
-.calculated-gpa {
-    margin-top: 20px;
-    font-size: 40px;
-    margin-bottom: 40px;
 }
 
 .links {
