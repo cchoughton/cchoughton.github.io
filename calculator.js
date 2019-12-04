@@ -31,20 +31,35 @@ document.getElementById("calculate").onclick = function () {
     var gpa=0;
     var total_credit_hours=0;
     var final_calc=0.0;
+    var anyNegativeGPAs = false;
+    var anyNegativeHours = false;
     for (var i = 0; i < grades.length; i++) {
-        gpa+=Number(convert(grades[i].value))*Number(credit_hours[i].value);
-        total_credit_hours+=Number(credit_hours[i].value);
-        var final_calc=(gpa/total_credit_hours).toFixed(2);
-        if (isNaN(gpa) || isNaN(total_credit_hours)) {
-            final_calc="Error!"
-        }
-        if (isNaN(final_calc)) final_calc=0.0;
-        if (isNaN(total_credit_hours)) {
-            total_credit_hours="Error!"
-        }
+        var currentgpa = Number(convert(grades[i].value));
+        var currenthours = Number(convert(credit_hours[i].value));
+        if (currentgpa < 0) anyNegativeGPAs = true;
+        if (currenthours < 0) anyNegativeHours = true;
+        gpa+=currentgpa*currenthours;
+        total_credit_hours+=currenthours;
     }
+    var final_calc=(gpa/total_credit_hours).toFixed(2);
+    if (isNaN(final_calc)) final_calc = 0.0;
+    if (anyNegativeGPAs)
+        final_calc="Error: negative grade entered";
+    if (anyNegativeHours)
+        total_credit_hours="Error: negative credit hours entered";
+    if (isNaN(gpa))
+        final_calc="Error: Invalid GPA"
+    if (isNaN(total_credit_hours))
+        total_credit_hours="Error: Invalid credit hours input"
     document.getElementsByClassName("calculated-gpa")[0].children[0].innerText=(final_calc);
     document.getElementsByClassName("calculated-credits")[0].children[0].innerText=(total_credit_hours);
+};
+
+function initialCourses() {
+    var div = document.createElement('div');
+    div.className = 'semester';
+    div.innerHTML='<form><label for="grade">Grade</label><input class="grade" type="text"><label for="credit_hours">Credit Hours</label><input class="credit_hours" type="text"></form>'
+    document.getElementById("courses").appendChild(div);
 };
 
 function convert (grade) {
@@ -62,3 +77,6 @@ function convert (grade) {
     else if (grade=="F") return 0.0;
     else return grade;
 }
+
+// GPAs: valid letter, invalid letter, positive number (valid), negative number (invalid), all other invalid input
+// Hours: positive number (valid), negative number (invalid), all other invalid input
