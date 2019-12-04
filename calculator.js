@@ -45,8 +45,10 @@ document.getElementById("calculate").onclick = function () {
     if (isNaN(final_calc)) final_calc = 0.0;
     if (anyNegativeGPAs)
         final_calc="Error: negative grade entered";
-    if (anyNegativeHours)
+    if (anyNegativeHours) {
+        final_calc="Error: negative credit hours entered";
         total_credit_hours="Error: negative credit hours entered";
+    }
     if (isNaN(gpa))
         final_calc="Error: Invalid GPA"
     if (isNaN(total_credit_hours))
