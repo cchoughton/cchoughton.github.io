@@ -30,7 +30,7 @@ document.getElementById("calculate").onclick = function () {
     var credit_hours = document.getElementsByClassName("credit_hours");
     var gpa=0;
     var total_credit_hours=0;
-    var final_calc=0.0;
+    var final_gpa=0.0;
     var anyNegativeGPAs = false;
     var anyNegativeHours = false;
     for (var i = 0; i < grades.length; i++) {
@@ -41,20 +41,21 @@ document.getElementById("calculate").onclick = function () {
         gpa+=currentgpa*currenthours;
         total_credit_hours+=currenthours;
     }
-    var final_calc=(gpa/total_credit_hours).toFixed(2);
-    if (isNaN(final_calc)) final_calc = 0.0;
+    var final_gpa=(gpa/total_credit_hours).toFixed(2);
+    var final_hours=total_credit_hours;
+    if (isNaN(final_gpa)) final_gpa = 0.0;
     if (anyNegativeGPAs)
-        final_calc="Error: negative grade entered";
+        final_gpa="Error: negative grade entered";
     if (anyNegativeHours) {
-        final_calc="Error: negative credit hours entered";
-        total_credit_hours="Error: negative credit hours entered";
+        final_gpa="Error: negative credit hours entered";
+        final_hours="Error: negative credit hours entered";
     }
     if (isNaN(gpa))
-        final_calc="Error: Invalid GPA"
+        final_gpa="Error: Invalid GPA"
     if (isNaN(total_credit_hours))
-        total_credit_hours="Error: Invalid credit hours input"
-    document.getElementsByClassName("calculated-gpa")[0].children[0].innerText=(final_calc);
-    document.getElementsByClassName("calculated-credits")[0].children[0].innerText=(total_credit_hours);
+        final_hours="Error: Invalid credit hours input"
+    document.getElementsByClassName("calculated-gpa")[0].children[0].innerText=(final_gpa);
+    document.getElementsByClassName("calculated-credits")[0].children[0].innerText=(final_hours);
 };
 
 function initialCourses() {
