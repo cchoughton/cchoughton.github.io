@@ -51,9 +51,9 @@ document.getElementById("calculate").onclick = function () {
         final_hours="Error: negative credit hours entered";
     }
     if (isNaN(gpa))
-        final_gpa="Error: Invalid GPA"
+        final_gpa="Error: invalid GPA"
     if (isNaN(total_credit_hours))
-        final_hours="Error: Invalid credit hours input"
+        final_hours="Error: invalid credit hours input"
     document.getElementsByClassName("calculated-gpa")[0].children[0].innerText=(final_gpa);
     document.getElementsByClassName("calculated-credits")[0].children[0].innerText=(final_hours);
 };
@@ -80,6 +80,3 @@ function convert (grade) {
     else if (grade=="F") return 0.0;
     else return grade;
 }
-
-// GPAs: valid letter, invalid letter, positive number (valid), negative number (invalid), all other invalid input
-// Hours: positive number (valid), negative number (invalid), all other invalid input
