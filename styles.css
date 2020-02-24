@@ -209,6 +209,8 @@ a {
     color: rgba(0, 0, 0, 0.7);
     display: block;
     text-decoration: none;
+    margin: 0 auto;
+    width: 100px;
 }
 
 .links a {
