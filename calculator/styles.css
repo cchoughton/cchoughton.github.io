@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,700");
+
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+    min-width:600px;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: rgba(100, 100, 100, .4);
+    margin: 0px;
+}
+
+h1 {
+    margin-top: 25px;
+    font-size: 40px;
+    font-weight: 100;
+    text-color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 100;
+    text-color: white;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom:10px;
+    font-color: rgba(0,0,0,.4);
+    font-family: Oswald;
+}
+
+button {
+    background-color: #e7e7e7; 
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:10px;
+    padding: 15px 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  animation: .6s slide-up;
+  margin-top:0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+form input {
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  border: 0;
+}
+form button:hover {
+  background: gold;
+}
+
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid gold;
+}
+
+.main {
+    #margin-top: 100px;
+}
+
+.calculator {
+    margin-top: 100px;
+}
+
+.top-buttons {
+    margin-top: 50px;
+}
+
+.semester {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.calculate-button {
+    margin-top: 20px;
+}
+
+.calculated-gpa {
+    margin-top: 20px;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.calculated-credits {
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.courses {
+    display:inline-grid;
+}
+
+@media (min-width: 350px) {
+    .courses {
+        grid-template-columns:300px;
+    }
+}
+
+@media (min-width: 650px) {
+    .courses {
+        grid-template-columns:300px 300px;
+    }
+}
+
+@media (min-width: 950px) {
+    .courses {
+        grid-template-columns:300px 300px 300px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .courses {
+        grid-template-columns:300px 300px 300px 300px;
+    }
+}
+
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+
+  label {
+    float: left;
+    width: 200px;
+  }
+
+  input {
+    float: left;
+    width: calc(100% - 200px);
+  }
+
+  form button {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
+
+.links {
+    width: 100%;
+    margin-top:100px;
+    text-align: center;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.links a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5px;
+    width: 200px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+    display: block;
+}
+
+.ps-top-to-bottom {
+    position: relative;
+    border-top: 8px solid black;
+}
+.ps-top-to-bottom:before, .ps-top-to-bottom:after {
+    content: "";
+    position: absolute;
+    background-image: -webkit-gradient(linear, 0 0, 0 500, from(#000), to(transparent));
+    top: 0px;
+    bottom: 0px;
+    width: 8px;
+}
+.ps-top-to-bottom:before {
+    left: 0px;
+}
+.ps-top-to-bottom:after {
+    right: 0px;
+}
+
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 3s infinite;
+
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+
+  /* Standar Syntax */
+  animation: rainbow 3s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+    0%{color: orange;}
+    10%{color: purple;}
+    20%{color: red;}
+    40%{color: yellow;}
+    60%{color: green;}
+    100%{color: blue;}
+    100%{color: orange;}
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+    0%{color: orange;}
+    10%{color: purple;}
+    20%{color: red;}
+    40%{color: yellow;}
+    60%{color: green;}
+    100%{color: blue;}
+    100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}
+    10%{color: purple;}
+    20%{color: red;}
+    40%{color: yellow;}
+    60%{color: green;}
+    100%{color: blue;}
+    100%{color: orange;}
+}
+
+.lucky {
+    background: url(http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png) 0 0 no-repeat; 
+    transform:translateY(200%);
+    zoom:40%;
+    height: 200px;
+    width: 400px;
+    margin: 100px auto 0;
+    margin-bottom: 600px;
+    animation: walk-cycle steps(11) infinite 1.5s;
+}
+@keyframes walk-cycle {
+    0% {
+        background-position: 0 0;
+    } 
+    100% {
+        background-position: 0 100%;
+    }
+}

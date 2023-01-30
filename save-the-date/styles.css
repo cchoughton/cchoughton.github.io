@@ -1,0 +1,110 @@
+.card {
+  content: url('assets/maincard_plain.jpg');
+  scale: 25%;
+  z-index: 1;
+  width: 1100px;
+  top: -300px;
+  -webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+}
+
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+    min-width:600px;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: rgba(100, 100, 100, .4);
+    margin: 0px;
+}
+
+.envelope_front {
+  content: url(https://cdn.discordapp.com/attachments/761368588581732375/1069436959421906984/envelope_front-01.png);
+  scale: 100%;
+  z-index: 2;
+}
+
+.envelope_back {
+  content: url(https://cdn.discordapp.com/attachments/761368588581732375/1069436723236458536/envelope_closed-01.png);
+  z-index: 0;
+}
+
+.envelope_top{ content:url(https://cdn.discordapp.com/attachments/761368588581732375/1069441424128479242/envelope_top_new.png);
+  z-index: 3;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+
+.flip-horizontally {
+  transform: scaleY(-1);
+}
+
+.center {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.box {
+  background-color: #218D9B;
+  height: 100px;
+  width: 100px;
+}
+
+.transform-active {
+  background-color: #45CEE0;
+  height: 200px;
+  width: 200px;
+}
+ 
+.card_anim{
+  scale:50%;
+  transform: translateY(-100px);
+}
+
+.top_anim{
+  transform: rotateX(0deg);
+  z-index:0;
+}
+
+.button-style{
+  margin-left:300px;
+  padding-top:500px;
+  position:absolute;
+}
+
+.envelope{
+  -webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+.envelope_top{
+  transition-duration:2s;
+}
+
+.envelope_anim{
+  opacity: 0;
+  transform:translateY(300px)
+}
+
+.action:hover{
+  cursor:pointer;
+}
